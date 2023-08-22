@@ -1,9 +1,6 @@
 module.exports = {
-    client: 'mysql',
-    connection: {
-      host: '127.0.0.1',
-      user: 'root',
-      password: 'senha',
-      database: 'girotopdb'
-    }
-  };
+  development: {
+    client: 'pg',
+    connection: 'postgres://default:dQe0FxAMbt1q@ep-wandering-rain-85940005.us-east-1.postgres.vercel-storage.com:5432/verceldb?sslmode=require'
+  }
+};
