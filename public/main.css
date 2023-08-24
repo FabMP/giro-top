@@ -29,7 +29,6 @@ body{
 
 h1, h2, h3, h4 ,h5, h6 {
     font-family:impact;
-    src: url(data:font/ttf;base64,AAEAAAAXAQ...);
     color: white;
 }
 
@@ -169,7 +168,7 @@ footer{
 @keyframes flutuar {
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 8px); }
-    100%   { transform: translate(0, -0px); } 
+    100%   { transform: translate(0, -0px); }
 }
 
 @keyframes flutuar2{
@@ -190,7 +189,10 @@ footer{
     }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
+    #contratar{
+        justify-self: center;
+    }
     #logocentral{
         width: 50%;
     }
