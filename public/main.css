@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 #botao {
     color: white;
     width: 100%;
@@ -27,9 +30,9 @@ body{
     color: #402E32;
 }
 
-h1, h2, h3, h4 ,h5, h6 {
-    font-family:impact;
-    color: white;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+  color: white;
 }
 
 .subtitulo{
@@ -191,7 +194,7 @@ footer{
 
 @media screen and (max-width: 767px) {
     #contratar{
-        justify-self: center;
+        justify-content: center;
     }
     #logocentral{
         width: 50%;
@@ -205,15 +208,6 @@ footer{
     p{
         font-size: 4vw;
     }
-}
-
-@media screen and (max-width: 349px) {
-    #toggle{
-        margin-left: 13vw;
-    }   
-}
-
-@media screen and (max-width: 425px) {
     .row{
         flex-direction: column;
     }
@@ -233,3 +227,16 @@ footer{
         text-align: left;
     }
 }
+
+@media screen and (min-width: 768px) {
+    #contratar{
+        float: right;
+    }
+}
+
+@media screen and (max-width: 349px) {
+    #toggle{
+        margin-left: 13vw;
+    }   
+}
+
