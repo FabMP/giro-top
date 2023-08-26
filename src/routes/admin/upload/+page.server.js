@@ -1,4 +1,4 @@
-import { useKnex } from '../../../hooks.server.js';
+import { createClient } from '@vercel/postgres';
 import fs from 'fs';
 import path from 'path';
 import { redirect } from "@sveltejs/kit"
@@ -20,7 +20,7 @@ export const actions = {
         const titulo = await data.get('titulo');
         const codigo = await data.get('codigo');
         const link = await data.get('link');
-        const { db } = await useKnex();
+        const db = createClient();
 
         const fileExtension = path.extname(arquivo.name);
         console.log(fileExtension)
@@ -38,6 +38,6 @@ export const actions = {
                 console.log(`Arquivo salvo em: ${createFilePath}`);
             });
 
-        await db('galeria').insert({ titulo: titulo, codigo: codigo, link: link, logo_path: filePath });
+        await db.query(`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath]);
     }
 }

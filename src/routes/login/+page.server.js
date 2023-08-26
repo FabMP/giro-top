@@ -1,6 +1,6 @@
 import { error, redirect } from "@sveltejs/kit";
 import bcrypt from 'bcrypt';
-import { useKnex } from "../../hooks.server.js";
+import { createClient } from '@vercel/postgres';
 
 /** @type {import('./$types').Actions} */
 export const actions = {
@@ -8,8 +8,8 @@ export const actions = {
         const data = await request.formData();
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
-        const { db } = await useKnex();
-        const [adm] = await db.table('administrador').where({ nome: nomeForm });
+        const db = createClient();
+        const [adm] = await db.query(`SELECT * FROM administrador WHERE nome = $1`, [nomeForm]);
         const senha = bcrypt.compareSync(passwordForm, adm.password);
 
         console.log('password comparison result:', senha);
@@ -23,4 +23,4 @@ export const actions = {
                 message: "Nome ou senha incorreta"
            }
         } 
-        }
+    }

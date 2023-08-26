@@ -1,14 +1,12 @@
-import { useKnex } from '../../hooks.server';
-import bcrypt from 'bcrypt';
+import { createClient } from '@vercel/postgres';
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
-    const { db } = await useKnex();
-    const galeriasBusca = await db.table('galeria').select('*');
+    const db = createClient();
+    const galeriasBusca = await db.query(`SELECT * FROM galeria`);
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
     return {
       galerias,
     };
-  }
-
+}

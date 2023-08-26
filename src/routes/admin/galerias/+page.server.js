@@ -1,6 +1,7 @@
-import { useKnex } from '../../../hooks.server.js';
+import { createClient } from '@vercel/postgres';
 import { redirect } from "@sveltejs/kit";
 
+/** @type {import('./$types').PageLoad} */
 export async function load({ cookies }) {
     const access = cookies.get("access") == "true";
 
@@ -8,8 +9,8 @@ export async function load({ cookies }) {
         throw redirect(302, "/login")
     }
 
-    const { db } = await useKnex();
-    const galeriasBusca = await db.table('galeria').select('*');
+    const db = createClient();
+    const galeriasBusca = await db.query(`SELECT * FROM galeria`);
 
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
@@ -21,7 +22,7 @@ export async function load({ cookies }) {
 /** @type {import('./$types').Actions} */
 export const actions = {
   default: async ({ request }) => {
-    const { db } = await useKnex();
+    const db = createClient();
 
     const rawBody = await request.text();
     const body = new URLSearchParams(rawBody);
@@ -29,9 +30,8 @@ export const actions = {
 
     console.log(`Apagando galeria: ${titulo}`);
 
-    await db('galeria').where({ titulo }).del();
+    await db.query(`DELETE FROM galeria WHERE titulo = $1`, [titulo]);
 
     return { success: true };
   },
 };
-
