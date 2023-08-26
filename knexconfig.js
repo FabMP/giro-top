@@ -1,7 +1,7 @@
 export const knexConfig = {
   development: {
     client: 'pg',
-    connection: `${process.env.POSTGRES_URL}?sslmode=require`,
+    connection: process.env.POSTGRES_URL+"?sslmode=require",
     migrations: {
       directory: './migrations'
     },
@@ -11,7 +11,7 @@ export const knexConfig = {
   },
   production: {
     client: 'pg',
-    connection: `${process.env.POSTGRES_URL}?sslmode=require`,
+    connection: process.env.POSTGRES_URL+"?sslmode=require",
     migrations: {
       directory: './migrations'
     },

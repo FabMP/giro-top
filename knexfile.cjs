@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: `${process.env.POSTGRES_URL}?sslmode=require`,
+    connection: process.env.POSTGRES_URL+"?sslmode=require",
     migrations: {
       directory: './migrations'
     },
@@ -11,7 +11,7 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: `${process.env.POSTGRES_URL}?sslmode=require`,
+    connection: process.env.POSTGRES_URL+"?sslmode=require",
     migrations: {
       directory: './migrations'
     },
