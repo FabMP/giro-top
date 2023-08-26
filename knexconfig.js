@@ -1,6 +1,6 @@
 export const knexConfig = {
     development: {
       client: 'pg',
-      connection: process.env.POSTGRES_URL_NON_POOLING
+      connection: process.env.POSTGRES_URL+"?sslmode=require"
     }
   };
