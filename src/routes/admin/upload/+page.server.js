@@ -33,8 +33,6 @@ export const actions = {
         const filePath = `public/logo-${titulo}${fileExtension}`
 
         const buffer = await arquivo.arrayBuffer()
-
-        const directoryPath = path.join(process.cwd(), 'public');
         
             fs.writeFile(createFilePath, new Uint8Array(buffer), (err) => {
                 if (err) throw err;
