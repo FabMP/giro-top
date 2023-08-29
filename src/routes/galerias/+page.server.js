@@ -7,7 +7,7 @@ const client = () => db.connect({
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
-    const galeriasBusca = await client.query(sql`SELECT titulo, link, codigo, logo_path FROM galeria`);
+    const galeriasBusca = await sql`SELECT titulo, link, codigo, logo_path FROM galeria`;
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
     return {

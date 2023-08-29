@@ -41,6 +41,6 @@ export const actions = {
                 console.log(`Arquivo salvo em: ${createFilePath}`);
             });
 
-        await client.query(sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath]);
+        await sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath];
     }
 }

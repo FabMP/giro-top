@@ -12,7 +12,7 @@ export const actions = {
         const data = await request.formData();
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
-        const [adm] = await client.query(sql`SELECT * FROM administrador WHERE nome = $1`, [nomeForm]);
+        const [adm] = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
         const senha = bcrypt.compare(passwordForm, adm.password);
 
         if (adm && senha) {

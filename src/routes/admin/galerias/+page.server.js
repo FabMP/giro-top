@@ -13,7 +13,7 @@ export async function load({ cookies }) {
         throw redirect(302, "/login")
     }
 
-    const galeriasBusca = await client.query(sql`SELECT * FROM galeria`);
+    const galeriasBusca = await sql`SELECT * FROM galeria`;
 
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
@@ -32,6 +32,6 @@ export const actions = {
 
     console.log(`Apagando galeria: ${titulo}`);
 
-    await client.query(sql`DELETE FROM galeria WHERE titulo = $1`, [titulo]);
+    await sql`DELETE FROM galeria WHERE titulo = $1`, [titulo];
   }
 };
