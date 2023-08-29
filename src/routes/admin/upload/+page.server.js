@@ -25,19 +25,13 @@ export const actions = {
         const codigo = await data.get('codigo');
         const link = await data.get('link');
 
-        const fileExtension = path.extname(arquivo.name);
-        console.log(fileExtension)
+        const fileExtension = path.extname(file.name);
 
         const createFilePath = path.join(process.cwd(), 'public', `logo-${titulo}${fileExtension}`)
 
         const filePath = `public/logo-${titulo}${fileExtension}`
 
-        const buffer = await arquivo.arrayBuffer()
-        
-            fs.writeFile(createFilePath, new Uint8Array(buffer), (err) => {
-                if (err) throw err;
-                console.log(`Arquivo salvo em: ${createFilePath}`);
-            });
+        fs.writeFile(createFilePath, file.stream());
 
         await sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath];
     }
