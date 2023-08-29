@@ -13,7 +13,8 @@ export const actions = {
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
         const adm = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
-        const senha = bcrypt.compare(passwordForm, adm.password);
+        const password = await sql`SELECT password FROM administrador LIMIT 1`
+        const senha = bcrypt.compare(passwordForm, password);
 
         if (adm && senha) {
             cookies.set("access", "true", { path: "admin/galerias", SameSite: "strict",  });
