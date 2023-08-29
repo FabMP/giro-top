@@ -12,8 +12,8 @@ export const actions = {
         const data = await request.formData();
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
-        const adm = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
-        const password = await sql`SELECT password FROM administrador LIMIT 1`
+        const [{adm}] = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
+        const [{password}] = await sql`SELECT password FROM administrador WHERE nome = ${nomeForm}`
         const senha = bcrypt.compare(passwordForm, password);
 
         if (adm && senha) {
