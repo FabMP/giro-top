@@ -27,9 +27,10 @@ export const actions = {
 
         const fileExtension = path.extname(file.name);
 
-        const createFilePath = path.join(process.cwd(), 'public', `logo-${titulo}${fileExtension}`)
+        const createFilePath = path.join('/', 'public', `logo-${titulo}${fileExtension}`)
 
-        const filePath = `public/logo-${titulo}${fileExtension}`
+        const filePath = `/public/logo-${titulo}${fileExtension}`
+
 
         fs.writeFile(createFilePath, file.stream());
 
