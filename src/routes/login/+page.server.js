@@ -1,20 +1,21 @@
-import { error, redirect } from "@sveltejs/kit";
+import { redirect } from "@sveltejs/kit";
 import bcrypt from 'bcrypt';
-import { createClient } from '@vercel/postgres';
+import { db, sql } from '@vercel/postgres';
 
+const client = () => db.connect({
+    connectionString: process.env.POSTGRES_URL
+});
+    
 /** @type {import('./$types').Actions} */
 export const actions = {
     default: async ({ cookies, request }) => {
         const data = await request.formData();
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
-        const db = createClient();
-        const [adm] = await db.query(`SELECT * FROM administrador WHERE nome = $1`, [nomeForm]);
-        const senha = bcrypt.compareSync(passwordForm, adm.password);
+        const [adm] = await client.query(sql`SELECT * FROM administrador WHERE nome = $1`, [nomeForm]);
+        const senha = bcrypt.compare(passwordForm, adm.password);
 
-        console.log('password comparison result:', senha);
-
-        if (adm && nomeForm == adm.nome && senha) {
+        if (adm && senha) {
             cookies.set("access", "true", { path: "admin/galerias", SameSite: "strict",  });
             throw redirect(302, 'admin/galerias');
           }

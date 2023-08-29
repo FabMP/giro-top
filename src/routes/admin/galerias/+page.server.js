@@ -1,5 +1,9 @@
-import { createClient } from '@vercel/postgres';
 import { redirect } from "@sveltejs/kit";
+import { db, sql } from '@vercel/postgres';
+
+const client = () => db.connect({
+  connectionString: process.env.POSTGRES_URL
+});
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ cookies }) {
@@ -9,8 +13,7 @@ export async function load({ cookies }) {
         throw redirect(302, "/login")
     }
 
-    const db = createClient();
-    const galeriasBusca = await db.query(`SELECT * FROM galeria`);
+    const galeriasBusca = await client.query(sql`SELECT * FROM galeria`);
 
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
@@ -22,7 +25,6 @@ export async function load({ cookies }) {
 /** @type {import('./$types').Actions} */
 export const actions = {
   default: async ({ request }) => {
-    const db = createClient();
 
     const rawBody = await request.text();
     const body = new URLSearchParams(rawBody);
@@ -30,8 +32,6 @@ export const actions = {
 
     console.log(`Apagando galeria: ${titulo}`);
 
-    await db.query(`DELETE FROM galeria WHERE titulo = $1`, [titulo]);
-
-    return { success: true };
-  },
+    await client.query(sql`DELETE FROM galeria WHERE titulo = $1`, [titulo]);
+  }
 };

@@ -1,7 +1,11 @@
-import { createClient } from '@vercel/postgres';
 import fs from 'fs';
 import path from 'path';
 import { redirect } from "@sveltejs/kit"
+import { db, sql } from '@vercel/postgres';
+
+const client = () => db.connect({
+    connectionString: process.env.POSTGRES_URL
+});
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ cookies }) {
@@ -20,7 +24,6 @@ export const actions = {
         const titulo = await data.get('titulo');
         const codigo = await data.get('codigo');
         const link = await data.get('link');
-        const db = createClient();
 
         const fileExtension = path.extname(arquivo.name);
         console.log(fileExtension)
@@ -38,6 +41,6 @@ export const actions = {
                 console.log(`Arquivo salvo em: ${createFilePath}`);
             });
 
-        await db.query(`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath]);
+        await client.query(sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath]);
     }
 }
