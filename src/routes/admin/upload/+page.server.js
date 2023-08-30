@@ -29,15 +29,13 @@ export const actions = {
 
         const fileExtension = path.extname(fileName);
 
-        const createFilePath = path.join(process.cwd(), 'public', `logo-${titulo}${fileExtension}`)
-
-        const filePath = `public/logo-${titulo}${fileExtension}`
+        const filePath = `../../../public/logo-${titulo}${fileExtension}`
 
         const buffer = await arquivo.arrayBuffer()
 
-        fs.writeFile(createFilePath, new Uint8Array(buffer), (err) => {
+        fs.writeFile(filePath, new Uint8Array(buffer), (err) => {
                 if (err) throw err;
-                console.log(`Arquivo salvo em: ${createFilePath}`);
+                console.log(`Arquivo salvo em: ${filePath}`);
             });
         await sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath];
     }
