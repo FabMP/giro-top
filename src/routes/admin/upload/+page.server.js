@@ -29,10 +29,10 @@ export const actions = {
 
         const fileExtension = path.extname(fileName);
 
-        const filePath = path.join(__dirname, '..', '..', '..', 'public', `logo-${titulo}${fileExtension}`);
+        const filePath = `../../../public/logo-${titulo}${fileExtension}`
+        console.log(filePath)
 
-
-        const buffer = await new Response(arquivo.stream()).arrayBuffer();
+        const buffer = await arquivo.arrayBuffer();
         fs.writeFileSync(filePath, new Uint8Array(buffer));
 
 
