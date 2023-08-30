@@ -25,7 +25,7 @@ export const actions = {
         const codigo = await data.get('codigo');
         const link = await data.get('link');
 
-        const fileExtension = path.extname(arquivo.name);
+        const fileExtension = path.extname(arquivo);
 
         const createFilePath = path.join('/', 'public', `logo-${titulo}${fileExtension}`)
 
