@@ -33,7 +33,9 @@ export const actions = {
 
         const filePath = `/public/logo-${titulo}${fileExtension}`
 
-        fs.writeFile(createFilePath, arquivo.stream());
+        const buffer = await new Response(arquivo.stream()).arrayBuffer();
+        fs.writeFileSync(createFilePath, new Uint8Array(buffer));
+
 
         await sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath];
     }
