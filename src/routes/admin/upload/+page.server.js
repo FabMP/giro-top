@@ -25,12 +25,13 @@ export const actions = {
         const codigo = await data.get('codigo');
         const link = await data.get('link');
 
-        const fileExtension = path.extname(arquivo);
+        const fileName = arquivo.name;
+
+        const fileExtension = path.extname(fileName);
 
         const createFilePath = path.join('/', 'public', `logo-${titulo}${fileExtension}`)
 
         const filePath = `/public/logo-${titulo}${fileExtension}`
-
 
         fs.writeFileSync(createFilePath, arquivo.stream());
 
