@@ -29,7 +29,7 @@ export const actions = {
 
         const fileExtension = path.extname(fileName);
 
-        const filePath = `/public/logo-${titulo}${fileExtension}`
+        const filePath = `../../public/logo-${titulo}${fileExtension}`
         console.log(filePath)
 
         const buffer = await new Response(arquivo.stream()).arrayBuffer();
