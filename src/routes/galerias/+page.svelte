@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Galerias</title>
+</svelte:head>
+
+
 <script>
   export let data;
   let codigoInput = "";

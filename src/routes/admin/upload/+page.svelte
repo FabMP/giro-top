@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Admin - Upload</title>
+</svelte:head>
+
+
 <style>
     @import '/public/main.css';
     

@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Login</title>
+</svelte:head>
+
+
 <style>
     @import '/public/main.css';
 

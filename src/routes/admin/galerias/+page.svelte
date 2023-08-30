@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Admin - Galerias</title>
+</svelte:head>
+
+
 <script>
   import { onMount } from "svelte";
   export let data;
