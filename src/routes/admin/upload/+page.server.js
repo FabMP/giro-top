@@ -29,12 +29,10 @@ export const actions = {
 
         const fileExtension = path.extname(fileName);
 
-        const createFilePath = path.join('/', 'public', `logo-${titulo}${fileExtension}`)
-
-        const filePath = `/public/logo-${titulo}${fileExtension}`
+        const filePath = `public/logo-${titulo}${fileExtension}`
 
         const buffer = await new Response(arquivo.stream()).arrayBuffer();
-        fs.writeFileSync(createFilePath, new Uint8Array(buffer));
+        fs.writeFileSync(filePath, new Uint8Array(buffer));
 
 
         await sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath];
