@@ -29,8 +29,8 @@ export const actions = {
 
         const fileExtension = path.extname(fileName);
 
-        const filePath = `../../../public/logo-${titulo}${fileExtension}`
-        console.log(filePath)
+        const filePath = path.join(__dirname, '..', '..', '..', 'public', `logo-${titulo}${fileExtension}`);
+
 
         const buffer = await new Response(arquivo.stream()).arrayBuffer();
         fs.writeFileSync(filePath, new Uint8Array(buffer));
