@@ -29,7 +29,11 @@ export const actions = {
 
         const fileExtension = path.extname(fileName);
 
-        const filePath = `./public/logo-${titulo}${fileExtension}`
+        const filePath = `./public/logo-${encodeURIComponent(titulo)}${fileExtension}`
+
+        if (!fs.existsSync('./public')) {
+            fs.mkdirSync('./public');
+        }
 
         const buffer = await arquivo.arrayBuffer()
 
