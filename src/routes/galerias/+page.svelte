@@ -34,16 +34,7 @@
             style="width: 60%"
           >
             <div class="card-body text-center">
-              <div class="row">
-                <div class="col-4 d-flex justify-content-center">
                   <div class="d-flex align-items-center">
-                    <img class="orange p-1 rounded"
-                      src={galeria.logo_path}
-                      alt="Logo"
-                      style="width: 13vw;"
-                    />
-                  </div>
-                </div>
                 <div class="col-8">
                   <form on:submit|preventDefault style="width: 50%;">
                     <div class="p-1">

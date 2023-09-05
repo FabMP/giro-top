@@ -20,12 +20,12 @@ export async function load({ cookies }) {
 export const actions = {
     default: async ({ request }) => {
         const data = await request.formData();
-        const arquivo = await data.get('anexar');
+        /*const arquivo = await data.get('anexar');*/
         const titulo = await data.get('titulo');
         const codigo = await data.get('codigo');
         const link = await data.get('link');
 
-        const fileName = arquivo.name;
+        /*const fileName = arquivo.name;
 
         const fileExtension = path.extname(fileName);
 
@@ -40,6 +40,7 @@ export const actions = {
         fs.writeFile(filePath, new Uint8Array(buffer), (err) => {
                 if (err) throw err;
             });
-        await sql`INSERT INTO galeria (titulo, codigo, link, logo_path) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link, filePath];
+        await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link];
+        */
     }
 }
