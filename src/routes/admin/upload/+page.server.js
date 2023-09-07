@@ -21,9 +21,9 @@ export const actions = {
     default: async ({ request }) => {
         const data = await request.formData();
         /*const arquivo = await data.get('anexar');*/
-        const titulo = await data.get('titulo');
-        const codigo = await data.get('codigo');
-        const link = await data.get('link');
+        const titulo = (await data.get('titulo')).toString();
+        const codigo = (await data.get('codigo')).toString();
+        const link = (await data.get('link')).toString();
 
         /*const fileName = arquivo.name;
 
