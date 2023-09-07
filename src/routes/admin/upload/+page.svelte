@@ -37,10 +37,6 @@
         <input type="text" class="form-control-lg form-control"  name="codigo" id="codigo" placeholder="Código da galeria" required >
     </div>
 
-    <div class="justify-content-center d-flex mb-3">
-        <input type="file" class="form-control-lg form-control"  name="anexar" id="anexar" placeholder="Anexar logo" required >
-    </div>
-
     <div class="d-flex justify-content-center block">
         <button type="submit" class="btn btn-lg form-control-lg text-light orange" id="botao">Enviar</button>
     </div>
