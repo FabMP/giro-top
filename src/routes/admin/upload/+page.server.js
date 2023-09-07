@@ -40,7 +40,7 @@ export const actions = {
         fs.writeFile(filePath, new Uint8Array(buffer), (err) => {
                 if (err) throw err;
             });
+            */
         await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link];
-        */
     }
 }
