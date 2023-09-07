@@ -41,6 +41,6 @@ export const actions = {
                 if (err) throw err;
             });
             */
-        await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3, $4)`, [titulo, codigo, link];
+        await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3)`, [titulo, codigo, link];
     }
 }
