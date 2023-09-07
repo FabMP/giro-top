@@ -1,12 +1,9 @@
 import { redirect } from "@sveltejs/kit";
-import { db } from '@vercel/postgres';
+import { db, sql } from '@vercel/postgres';
 
 const client = () => db.connect({
   connectionString: process.env.POSTGRES_URL+"?sslmode=require"
 });
-
-const connection = client();
-
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ cookies }) {
@@ -16,7 +13,7 @@ export async function load({ cookies }) {
         throw redirect(302, "/login")
     }
 
-    const galeriasBusca = await connection.sql`SELECT * FROM galeria`;
+    const galeriasBusca = await sql`SELECT * FROM galeria`;
 
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
@@ -35,6 +32,6 @@ export const actions = {
 
     console.log(`Apagando galeria: ${titulo}`);
 
-    await connection.sql`DELETE FROM galeria WHERE titulo = $1`, [titulo];
+    await sql`DELETE FROM galeria WHERE titulo = $1`, [titulo];
   }
 };
