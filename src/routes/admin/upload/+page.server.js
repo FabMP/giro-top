@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { redirect } from "@sveltejs/kit"
-import { db, sql } from '@vercel/postgres';
+import { db } from '@vercel/postgres';
 
 const client = () => db.connect({
-    connectionString: process.env.POSTGRES_URL
+    connectionString: process.env.POSTGRES_URL+"?sslmode=require"
 });
 
 /** @type {import('./$types').PageLoad} */
@@ -19,6 +19,7 @@ export async function load({ cookies }) {
 /** @type {import('./$types').Actions} */
 export const actions = {
     default: async ({ request }) => {
+        const connection = client();
         const data = await request.formData();
         /*const arquivo = await data.get('anexar');*/
         const titulo = await data.get('titulo');
@@ -43,6 +44,6 @@ export const actions = {
             */
             console.log(titulo, codigo, link)
 
-        await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3)`, [titulo, codigo, link];
+        await connection.sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3)`, [titulo, codigo, link];
     }
 }
