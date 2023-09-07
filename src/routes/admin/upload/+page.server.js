@@ -21,9 +21,9 @@ export const actions = {
     default: async ({ request }) => {
         const data = await request.formData();
         /*const arquivo = await data.get('anexar');*/
-        const titulo = (await data.get('titulo')).toString();
-        const codigo = (await data.get('codigo')).toString();
-        const link = (await data.get('link')).toString();
+        const titulo = await data.get('titulo');
+        const codigo = await data.get('codigo');
+        const link = await data.get('link');
 
         /*const fileName = arquivo.name;
 
@@ -41,6 +41,8 @@ export const actions = {
                 if (err) throw err;
             });
             */
+            console.log(titulo, codigo, link)
+
         await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3)`, [titulo, codigo, link];
     }
 }
