@@ -5,7 +5,6 @@
 
 <script>
   export let data;
-  console.log(data.galerias[0].titulo)
   let codigoInput = "";
 </script>
 
