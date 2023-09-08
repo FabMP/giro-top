@@ -5,7 +5,7 @@
 
 <script>
   export let data;
-  console.log(data.galerias.titulo)
+  console.log(data.galerias.titulo[0])
   let codigoInput = "";
 </script>
 
@@ -18,8 +18,8 @@
     imagens.
   </p>
 </div>
-
-{#if data.galerias.fields == null }
+s
+{#if data.galerias == null }
   <div class="text-center">
     <h3 class="d-inline text-bg-danger p-2 rounded">
       Não existem galerias a serem exibidas
