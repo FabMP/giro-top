@@ -1,11 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { redirect } from "@sveltejs/kit"
-import { db, sql } from '@vercel/postgres';
 
-const client = () => db.connect({
-    connectionString: process.env.POSTGRES_URL+"?sslmode=require"
-});
+import { sql } from '@vercel/postgres';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ cookies }) {
