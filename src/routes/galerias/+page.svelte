@@ -32,8 +32,8 @@
             class="card border-warning galeria d-flex justify-content-center"
             style="width: 60%"
           >
-            <div class="card-body text-center d-flex justify-content-center">
-              <div class="d-flex align-items-center">
+            <div class="card-body text-center d-flex align-itemscenter">
+              <div class="d-flex justify-content-center">
               <form on:submit|preventDefault style="width: 50%;">
                 <div class="p-1">
                   <h2 class="card-title orange-texto">{galeria.titulo}</h2>
