@@ -33,44 +33,43 @@
             class="card border-warning galeria d-flex justify-content-center"
             style="width: 60%"
           >
+          <div class="d-flex justify-content-center">
             <div class="card-body text-center">
-              <div class="d-flex justify-content-center">
-                <div class="d-flex align-items-center">
-                  <form on:submit|preventDefault style="width: 50%;">
-                    <div class="p-1">
-                      <h2 class="card-title orange-texto">{galeria.titulo}</h2>
+              <div class="d-flex align-items-center">
+              <form on:submit|preventDefault style="width: 50%;">
+                <div class="p-1">
+                  <h2 class="card-title orange-texto">{galeria.titulo}</h2>
 
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="codigo"
-                        name="codigo"
-                        placeholder="Insira o código fornecido"
-                        bind:value={codigoInput}
-                      />
-                    </div>
-
-                    <div class="p-1">
-                      <button
-                        id="botao"
-                        style="color: white;"
-                        class="btn form-control orange"
-                        type="submit"
-                        on:click={(event) => {
-                          event.preventDefault();
-                          if (galeria.codigo == codigoInput) {
-                            window.location.href = galeria.link;
-                          }
-                        }}
-                      >
-                        Acessar galeria
-                      </button>
-                    </div>
-                  </form>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="codigo"
+                    name="codigo"
+                    placeholder="Insira o código fornecido"
+                    bind:value={codigoInput}
+                  />
                 </div>
-              </div>
-                  
-              </div>
+
+                <div class="p-1">
+                  <button
+                    id="botao"
+                    style="color: white;"
+                    class="btn form-control orange"
+                    type="submit"
+                    on:click={(event) => {
+                      event.preventDefault();
+                      if (galeria.codigo == codigoInput) {
+                        window.location.href = galeria.link;
+                      }
+                    }}
+                  >
+                    Acessar galeria
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
             </div>
           </div>
         </div>
