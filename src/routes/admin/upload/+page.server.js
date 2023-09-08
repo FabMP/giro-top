@@ -40,6 +40,6 @@ export const actions = {
             */
             console.log(titulo, codigo, link)
 
-        await sql`INSERT INTO galeria (titulo, codigo, link) VALUES ($1, $2, $3)`, [titulo, codigo, link];
+            await sql`INSERT INTO galeria (Titulo, Codigo, Link) VALUES (${titulo}, ${codigo}, ${link});`; 
     }
 }
