@@ -27,14 +27,13 @@
 {:else}
   <div class="d-flex flex-column-reverse">
     {#each data.galerias.rows as galeria}
-      <div class="d-flex justify-content-center">
         <div class="d-flex justify-content-center mb-3">
           <div
             class="card border-warning galeria d-flex justify-content-center"
             style="width: 60%"
           >
           <div class="d-flex justify-content-center">
-            <div class="card-body text-center">
+            <div class="card-body text-center d-flex justify-content-center">
               <div class="d-flex align-items-center">
               <form on:submit|preventDefault style="width: 50%;">
                 <div class="p-1">
@@ -72,7 +71,6 @@
           </div>
             </div>
           </div>
-        </div>
     {/each}
   </div>
 {/if}
