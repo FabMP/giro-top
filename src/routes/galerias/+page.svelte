@@ -17,7 +17,7 @@
     imagens.
   </p>
 </div>
-s
+
 {#if data.galerias.rows == null }
   <div class="text-center">
     <h3 class="d-inline text-bg-danger p-2 rounded">
@@ -35,7 +35,6 @@ s
           >
             <div class="card-body text-center">
                   <div class="d-flex align-items-center">
-                <div class="col-8">
                   <form on:submit|preventDefault style="width: 50%;">
                     <div class="p-1">
                       <h2 class="card-title orange-texto">{galeria.titulo}</h2>
@@ -72,7 +71,6 @@ s
             </div>
           </div>
         </div>
-      </div>
     {/each}
   </div>
 {/if}

@@ -44,7 +44,7 @@
   >
 </div>
 
-{#if data.galerias == null}
+{#if data.galerias.row == null}
   <div class="text-center">
     <h3 class="d-inline text-bg-danger p-2 rounded">
       Não existem galerias a serem exibidas
@@ -52,7 +52,7 @@
   </div>
 {:else}
   <div class="d-flex flex-column-reverse">
-    {#each data.galerias as galeria}
+    {#each data.galerias.row as galeria}
       <div class=" d-flex flex-column-reverse">
         <div class="d-flex justify-content-center mb-3">
           <div

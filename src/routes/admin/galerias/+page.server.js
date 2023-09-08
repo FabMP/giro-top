@@ -12,8 +12,6 @@ export async function load({ cookies }) {
     const galeriasBusca = await sql`SELECT Titulo, Codigo, Link FROM galeria`;
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
 
-    console.log(galerias)
-
     return {
             galerias
     }
