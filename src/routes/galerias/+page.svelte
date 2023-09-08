@@ -32,7 +32,6 @@
             class="card border-warning galeria d-flex justify-content-center"
             style="width: 60%"
           >
-          <div class="d-flex justify-content-center">
             <div class="card-body text-center d-flex justify-content-center">
               <div class="d-flex align-items-center">
               <form on:submit|preventDefault style="width: 50%;">
@@ -70,8 +69,7 @@
           </div>
           </div>
             </div>
-          </div>
-    {/each}
+                {/each}
   </div>
 {/if}
 
