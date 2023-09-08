@@ -34,7 +34,8 @@
             style="width: 60%"
           >
             <div class="card-body text-center">
-                  <div class="d-flex align-items-center">
+              <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-center">
                   <form on:submit|preventDefault style="width: 50%;">
                     <div class="p-1">
                       <h2 class="card-title orange-texto">{galeria.titulo}</h2>
@@ -67,6 +68,8 @@
                     </div>
                   </form>
                 </div>
+              </div>
+                  
               </div>
             </div>
           </div>
