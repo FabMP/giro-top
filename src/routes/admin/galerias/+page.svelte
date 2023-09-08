@@ -44,7 +44,7 @@
   >
 </div>
 
-{#if data.galerias.row == null}
+{#if data.galerias.rows == null}
   <div class="text-center">
     <h3 class="d-inline text-bg-danger p-2 rounded">
       Não existem galerias a serem exibidas

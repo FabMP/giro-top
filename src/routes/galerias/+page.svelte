@@ -30,7 +30,7 @@
       <div class="d-flex flex-column-reverse">
         <div class="d-flex justify-content-center mb-3">
           <div
-            class="card border-warning galeria justify-content-center"
+            class="card border-warning galeria d-flex justify-content-center"
             style="width: 60%"
           >
             <div class="card-body text-center">
