@@ -27,7 +27,7 @@
 {:else}
   <div class="d-flex flex-column-reverse">
     {#each data.galerias.rows as galeria}
-      <div class="d-flex justify-content-center flex-column-reverse">
+      <div class="d-flex justify-content-center">
         <div class="d-flex justify-content-center mb-3">
           <div
             class="card border-warning galeria d-flex justify-content-center"
