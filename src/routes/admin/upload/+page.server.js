@@ -1,7 +1,4 @@
-import fs from 'fs';
-import path from 'path';
 import { redirect } from "@sveltejs/kit"
-
 import { sql } from '@vercel/postgres';
 
 /** @type {import('./$types').PageLoad} */

@@ -1,14 +1,12 @@
-import { db, sql } from '@vercel/postgres';
-
-const client = () => db.connect({
-  connectionString: process.env.POSTGRES_URL+"?sslmode=require"
-});
+import { sql } from '@vercel/postgres';
 
 
 /** @type {import('./$types').PageLoad} */
 export async function load() {
-    const galeriasBusca = await sql`SELECT titulo, link, codigo FROM galeria`;
+    const galeriasBusca = await sql`SELECT Titulo, Codigo, Link FROM galeria`;
     const galerias = JSON.parse(JSON.stringify(galeriasBusca));
+
+    console.log(galerias)
 
     return {
       galerias,
