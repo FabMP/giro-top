@@ -12,7 +12,9 @@ export const actions = {
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
         const adm = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
-        const password = await sql`SELECT password FROM administrador WHERE nome = ${nomeForm}`
+        const password = await sql`SELECT * FROM administrador WHERE password = ${passwordForm}`
+
+        console.log(adm, password);
 
         if (adm && password) {
             cookies.set("access", "true", { path: "admin/galerias", SameSite: "strict",  });
