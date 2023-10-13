@@ -13,7 +13,9 @@ export const actions = {
         const nomeForm = data.get('nome');
         const passwordForm = data.get('password');
         const adm = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
-        const password = await sql`SELECT password FROM administrador WHERE nome = ${nomeForm}`
+        const passwordResult = await sql`SELECT password FROM administrador WHERE nome = ${nomeForm}`
+
+        const password = passwordResult.rows[0].password;
 
         console.log(password)
 
