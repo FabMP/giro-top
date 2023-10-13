@@ -15,7 +15,9 @@ export const actions = {
         const adm = await sql`SELECT * FROM administrador WHERE nome = ${nomeForm}`;
         const password = await sql`SELECT password FROM administrador WHERE nome = ${nomeForm}`
 
-        const bate = bcrypt.compare(passwordForm, password);
+        console.log(password)
+
+        const bate = bcrypt.compareSync(passwordForm, password);
 
         if (adm && bate) {
             cookies.set("access", "true", { path: "admin/galerias", SameSite: "strict"});
