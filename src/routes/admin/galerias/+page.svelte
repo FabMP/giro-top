@@ -52,7 +52,7 @@
   </div>
 {:else}
   <div class="d-flex flex-column-reverse">
-    {#each data.galerias.row as galeria}
+    {#each data.galerias.rows as galeria}
       <div class=" d-flex flex-column-reverse">
         <div class="d-flex justify-content-center mb-3">
           <div
