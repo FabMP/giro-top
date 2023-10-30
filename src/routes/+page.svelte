@@ -173,6 +173,6 @@
 
 <script>
     export function whatsapp(){
-        window.open("https://api.whatsapp.com/send?phone=5584999525134", "blank_")
+        window.open("https://api.whatsapp.com/send?phone=558491925328", "blank_")
     }
 </script>
