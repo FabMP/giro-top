@@ -87,6 +87,7 @@ ul li{
 
 .link{
     color: rgb(38, 4, 77);
+    transition: 0.5s;
 }
 
 .link:hover{
