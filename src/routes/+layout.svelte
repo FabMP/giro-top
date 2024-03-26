@@ -6,8 +6,7 @@
         <img src="/girotop-logo.png" alt="Logo" href="/" id="logo" />
       </a>
     
-
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse d-flex justify-content-end">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a

@@ -59,7 +59,7 @@
     </div>
 </div>
 
-<div class="mt-5 pt-5 pb-5" id="secao2">
+<div class="mt-5 pt-5 pb-5" id="diferenciais">
     <div class="d-flex justify-content-center">
         <h1 class="orange-texto">Totalmente personalizável!</h1>
     </div>
@@ -116,7 +116,7 @@
                         </ul>
                         <div>
                             <div class="d-flex quadro justify-content-center mb-3">
-                                <video width="70%" controls>
+                                <video width="60%" controls>
                                     <source src="/video4.mp4" type="video/mp4" />
                                     <track kind="captions">
                                 </video>
