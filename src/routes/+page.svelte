@@ -59,7 +59,7 @@
     </div>
 </div>
 
-<div class="mt-5 pt-5 pb-5" id="principal2">
+<div class="mt-5 pt-5 pb-5" id="secao2">
     <div class="d-flex justify-content-center">
         <h1 class="orange-texto">Totalmente personalizável!</h1>
     </div>
@@ -96,7 +96,7 @@
     </div>
 </div>
 
-        <div class="d-flex justify-content-center mt-5 align-items-center">
+        <div class="d-flex justify-content-center mt-5 align-items-center" id="secao3">
             <div class="d-flex justify-content-center">
                 <h1 class="orange-texto">Com direito a:</h1>
             </div>
@@ -128,7 +128,7 @@
             </div>
             
 
-<div id="principal3" class="pt-5 pb-5">
+<div id="secao4" class="pt-5 pb-5">
     <div class="d-flex justify-content-center text-center"><h1 style="font-size: 4vw;">Não perca tempo e venha com a melhor do RN!</h1></div>
     <div class="d-flex justify-content-center p-3">
         <button class="btn orange align-middle" width="100%" on:click={whatsapp}><h3>Contratar agora</h3></button>
@@ -175,4 +175,4 @@
     export function whatsapp(){
         window.open("https://api.whatsapp.com/send?phone=558491925328", "blank_")
     }
-</script>
+</script>     
