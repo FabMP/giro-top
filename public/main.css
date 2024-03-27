@@ -190,8 +190,8 @@ footer{
 }
 
 @media screen and (max-width: 991px) {
-    .esconde{
-        display: none;
+    .esconder{
+        display: none
     }
 }
 
