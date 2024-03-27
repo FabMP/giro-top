@@ -9,11 +9,6 @@
 </svelte:head>
 
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PBXJ6Z8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 
 <div id="principal" class="d-flex justify-content-center">
     <div class="d-flex align-items-center">
