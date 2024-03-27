@@ -1,14 +1,7 @@
-<svelte:head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5PBXJ6Z8');</script>
-    <!-- End Google Tag Manager -->
-</svelte:head>
-
-
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5PBXJ6Z8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div id="principal" class="d-flex justify-content-center">
     <div class="d-flex align-items-center">
@@ -55,7 +48,7 @@
                             com imagens únicas e personalizadas!
                         </p>
                         <div class="d-flex p-3" id="contratar">
-                            <button class="btn orange align-middle" width="100%" on:click={whatsapp}><h3>Contratar agora</h3></button>
+                            <button class="orange align-middle" width="100%" on:click={whatsapp}>Contratar agora</button>
                         </div>
                     </div>
                     
@@ -114,7 +107,7 @@
             </div>
             </div>
 
-            <div >
+            <div>
                 <div class="d-flex justify-content-center">
                     <div class="d-flex justify-content-center">
                         <ul>
@@ -136,14 +129,13 @@
                         </div>      
                 </div>  
                 </div>
-    
             </div>
             
 
 <div id="secao4" class="pt-5 pb-5">
     <div class="d-flex justify-content-center text-center"><h1 style="font-size: 4vw;">Não perca tempo e venha com a melhor do RN!</h1></div>
     <div class="d-flex justify-content-center p-3">
-        <button class="btn orange align-middle" width="100%" on:click={whatsapp}><h3>Contratar agora</h3></button>
+        <button class="orange align-middle" width="100%" on:click={whatsapp}>Contratar agora</button>
     </div>
 </div>
 

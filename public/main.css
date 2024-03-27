@@ -18,6 +18,24 @@
     animation-duration: 0.8s;
 }
 
+button{
+    font-family: 'Anton', sans-serif;
+    border: none;
+    padding: 1vw;
+    font-size: 2vw;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: rgb(255, 153, 1);
+    color: #12041d;
+}
+
 body{
     background: #12041d;
     background: -webkit-linear-gradient(to right, #13041f, #12041d);
@@ -40,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .orange{
-    background-color: rgb(248, 125, 24);
+    background-color: rgb(255, 81, 0);
 }
 
 .orange-texto{
@@ -135,11 +153,18 @@ video{
     background: linear-gradient(180deg, #13041f, #57287a);
 }
 
+#depoimentos {
+    height: min-content;
+    background: #12041d;
+    background: -webkit-linear-gradient(180deg, #13051f 0%, rgba(34, 2, 41, 0.911) 30%, #12041d 80%);
+    background: linear-gradient(180deg, #13051f 0%, rgba(24, 1, 29, 0.966) 30%, #12041d 80%);
+}
+
 #secao4{
     height: min-content;
     background: #12041d;
-    background: -webkit-linear-gradient(180deg, #57287a 0%, rgba(109, 6, 129, 0.815) 30%, rgba(84, 4, 100, 0.863) 80%);
-    background: linear-gradient(180deg, #57287a 0%, rgba(109, 6, 129, 0.815) 30%, rgba(84, 4, 100, 0.863) 80%);
+    background: -webkit-linear-gradient(180deg, #12041d 10%, rgba(52, 4, 61, 0.815) 40%, rgba(67, 4, 80, 0.863) 80%);
+    background: linear-gradient(180deg, #12041d 10%, rgba(52, 4, 61, 0.815) 40%, rgba(67, 4, 80, 0.863) 80%);
 }
 
 .flutuante{
@@ -157,9 +182,9 @@ video{
 }
 
 footer{
-    background: rgba(84, 4, 100, 0.863);
-    background: -webkit-linear-gradient(90deg, rgba(84, 4, 100, 0.863) 0%, rgba(68, 6, 80, 0.726) 15%, rgba(14, 0, 17, 0.712) 100%);
-    background: linear-gradient(180deg, rgba(84, 4, 100, 0.863) 0%, rgba(68, 6, 80, 0.726) 15%, rgba(14, 0, 17, 0.712) 100%);
+    background: rgba(67, 4, 80, 0.863);
+    background: -webkit-linear-gradient(90deg, rgba(67, 4, 80, 0.863) 0%, rgba(68, 6, 80, 0.726) 15%, rgba(14, 0, 17, 0.712) 100%);
+    background: linear-gradient(180deg, rgba(67, 4, 80, 0.863) 0%, rgba(68, 6, 80, 0.726) 15%, rgba(14, 0, 17, 0.712) 100%);
 }
 
 @keyframes girar {
