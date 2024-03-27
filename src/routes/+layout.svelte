@@ -50,9 +50,6 @@
   export function whatsapp(){
       window.open("https://api.whatsapp.com/send?phone=5584999525134", "blank_")
   }
-
-  const tela = document.querySelector()
-
 </script>
 
 <slot />
