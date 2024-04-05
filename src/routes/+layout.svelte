@@ -1,15 +1,14 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-      <a href="/">
-        <img src="/girotop-logo.png" alt="Logo" href="/" id="logo" />
-      </a>
-    
-      <div id="toggle">
-        <span class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <span class="navbar-toggler-icon"></span>
-        </span>
-      </div>
 
+      <img src="/girotop-logo.png" alt="Logo" href="/" id="logo" />
+  
+            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <div class="d-flex justify-content-center">
+                <h3>...</h3>
+              </div>      
+            </button>
+        
     <div class="collapse navbar-collapse d-flex justify-content-end">
       <div class="esconde">
       <ul class="navbar-nav">
@@ -18,6 +17,20 @@
             class="nav-link active icon-link icon-link-hover"
             style="aria-current=page"
             href="/"><h3 class="link">Home</h3></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active icon-link icon-link-hover"
+            style="aria-current=page"
+            href="/#quem-somos"><h3 class="link">Quem somos</h3></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active icon-link icon-link-hover"
+            style="aria-current=page"
+            href="/#diferenciais"><h3 class="link">Diferenciais</h3></a
           >
         </li>
         <li class="nav-item">
@@ -49,12 +62,21 @@
           </li>
           <li class="list-group-item">
             <div class="d-flex justify-content-center">
+              <a href="/#diferenciais" class="orange-texto">Quem somos</a>
+            </div>
+            </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-center">
               <a href="/#diferenciais" class="orange-texto">Diferenciais</a>
             </div>
-            </li>  
-          <button class="list-group-item" on:click={whatsapp}><p class="orange-texto">Contato</p></button>
-        </ul>
-      </div>
+            </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-center">
+              <button class="orange align-middle" width="100%" style="font-size: 3vw;" on:click={whatsapp}>Contato</button>
+            </div>
+          </li>       
+          </ul>
+        </div>
     </div>
   </div>
 </div>

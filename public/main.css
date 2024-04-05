@@ -8,14 +8,31 @@
 }
 
 #logo{
-    margin-left: 10%;
+    margin-left: 3%;
     margin-right: 10px;
+    width: 6%;
+}
+
+button.navbar-toggler{
+    width: 6%;
+    height:6%;
+    margin-right: 3%;
+}
+
+button{
+    height: 100%;
+    width: 100%;
 }
 
 #logo:hover{
+    cursor:pointer;
     animation-name: girar;
     animation-timing-function: ease-in-out;
     animation-duration: 0.8s;
+}
+
+#toggle{
+    width: 5%
 }
 
 button{
@@ -117,6 +134,26 @@ p{
     font-weight: bold;
 }
 
+.h1{
+    font-size: 4vw;
+}
+
+.h2{
+    font-size: 3.5vw;
+}
+
+.h3{
+    font-size: 3vw;
+}
+
+#quem-somos{
+    margin-top: 3%;
+}
+
+svg{
+    height: 3vw;
+}
+
 a{
     text-decoration: none;
     font-size: 3vw;
@@ -138,15 +175,19 @@ video{
     text-shadow: rgba(255, 173, 80, 0.767) 0px 5px 3px;
 }
 
-#principal{
-    height: 90vh;
-    background: rgba(38, 4, 77, 0.719);
-    background: linear-gradient(30deg, rgba(109, 6, 129, 0.815) 0%, rgba(233, 113, 32, 0.863) 70%, #8b37bb7a 100%);
-    background: -webkit-linear-gradient(30deg, rgba(109, 6, 129, 0.815) 0%, rgba(233, 113, 32, 0.863) 70%, #8b37bb7a 100%);
-    box-shadow: rgba(139, 14, 156, 0.664) 0vw 0.5vw 2vw;
+.inicial{
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
 }
 
+.sub{
+    font-size: 2.3vw;
+}
+
+
+
 #diferenciais {
+    padding: 2em;
     height:min-content;
     background: #12041d;
     background: -webkit-linear-gradient(180deg, #13041f, #57287a);
@@ -169,14 +210,14 @@ video{
 
 .flutuante{
     animation-name: flutuar;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function:  ease-in-out;
 }
 
 .flutuante2{
     animation-name: flutuar2;
-    animation-duration: 4s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function:  ease-in-out;
 }
@@ -208,7 +249,7 @@ footer{
     100%   { transform: translate(0, -0px); } 
 }
 
-@media screen and (min-width: 950px) {
+/* @media screen and (min-width: 950px) {
     #logo{
         width: 80px;
     }
@@ -218,7 +259,7 @@ footer{
     #logo{
         width: 35%;
     }
-}
+} */
 
 @media screen and (max-width: 991px) {
     .esconde{
@@ -233,17 +274,14 @@ footer{
     #logocentral{
         width: 50%;
     }
-    .titulo{
-        font-size: 16vw;
-    }
-    #subtitulocentral{
-        font-size: 5vw;
-    }
-    p{
-        font-size: 4vw;
-    }
-    .row{
+    /* .row{
         flex-direction: column;
+    } */
+    #principal{
+        padding: 1em;
+        background-image: url('/party.png');
+        background-repeat: no-repeat;
+        background-size: 150%;
     }
     .col{
         margin-bottom: 3vw;
@@ -251,6 +289,19 @@ footer{
     .paragrafo{
         text-indent:0vw;
         text-align: center;
+    }
+    .inicial{
+        font-size: 3.5vw;
+    }
+    .sub{
+        font-size: 2.2vw;
+    }
+    #botao1{
+        height:8vw;
+        font-size: 4vw;
+    }
+    #video1{
+        width:30vw;
     }
     .section{
         flex-direction: column;
@@ -266,10 +317,23 @@ footer{
     #contratar{
         float: right;
     }
+
+    #principal{
+        padding: 5%;
+        background-image: url('/party.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #logo{
+        width:12vw;
+    }
 }
 
 @media screen and (max-width: 349px) {
     #toggle{
-        margin-left: 13vw;
-    }   
+        margin-left: 13%;
+    }
 }
