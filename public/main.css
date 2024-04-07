@@ -130,20 +130,20 @@ ul li{
 
 p{
     color: white;
-    font-size:2vw;
     font-weight: bold;
+    font-size: 3.5vh;
 }
 
 .h1{
-    font-size: 4vw;
+    font-size: 5.5vh;
 }
 
 .h2{
-    font-size: 3.5vw;
+    font-size: 3.5vh;
 }
 
 .h3{
-    font-size: 3vw;
+    font-size: 3vh;
 }
 
 #quem-somos{
@@ -183,8 +183,6 @@ video{
 .sub{
     font-size: 2.3vw;
 }
-
-
 
 #diferenciais {
     padding: 2em;
@@ -281,27 +279,44 @@ footer{
         padding: 1em;
         background-image: url('/party.png');
         background-repeat: no-repeat;
-        background-size: 150%;
+        background-size: 340%;
+        background-color: black;
+        display: column;
     }
     .col{
         margin-bottom: 3vw;
+    }
+    .row{
+        flex-direction: column;
     }
     .paragrafo{
         text-indent:0vw;
         text-align: center;
     }
     .inicial{
-        font-size: 3.5vw;
+        text-align: center;
+        font-size: 4vh;
+    }
+    .h1{
+        text-align: center;
+    }
+    .contratar{
+        height:8vh;
+        font-size: 4vh;
     }
     .sub{
-        font-size: 2.2vw;
+        font-size: 3.5vh;
+        text-align: center;
+    }
+    #headlines{
+        flex-direction: column;
     }
     #botao1{
-        height:8vw;
-        font-size: 4vw;
+        height:8vh;
+        font-size: 4vh;
     }
     #video1{
-        width:30vw;
+        width:60vw;
     }
     .section{
         flex-direction: column;
