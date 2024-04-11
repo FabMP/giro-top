@@ -9,9 +9,8 @@
                     <div class="inicial_e_sub">
                         <h3
                     class="inicial"
-                    style="text-shadow:purple 0px 5px 3px;"
                     >
-                        Diga adeus aos eventos monótonos! Com a nossa plataforma 360, transformamos o seu evento em uma experiência inesquecível!
+                        Diga adeus aos eventos monótonos! <h3 class="inicial orange-texto">Com a nossa plataforma 360, transformamos o seu evento em uma experiência inesquecível!</h3>
                     </h3>
                     </div>    
 
@@ -108,29 +107,32 @@
             </div>
             </div>
 
-            <div>
-                <div class="d-flex justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
                     <div class="d-flex justify-content-center">
                         <ul>
-                            <li><h1 class="h1">Filtro;</h1></li>
-                            <li><h1 class="h1">Música;</h1></li>
-                            <li><h1 class="h1">Personalização;</h1></li>
-                            <li><h1 class="h1">Galeria online;</h1></li>
-                            <li><h1 class="h1">Alta resolução;</h1></li>
-                            <li><h1 class="h1">Ring light;</h1></li>
-                            <li><h1 class="h1">Câmera lenta.</h1></li>
+                            <li><p>Filtro;</p></li>
+                            <li><p>Música;</p></li>
+                            <li><p>Personalização;</p></li>
+                            <li><p>Galeria online;</p></li>
+                            <li><p>Alta resolução;</p></li>
+                            <li><p>Ring light;</p></li>
+                            <li><p>Câmera lenta.</p></li>
                         </ul>
-                        <div>
+                        </div>
+                    </div>
+                    <div class="col">
                             <div class="d-flex quadro justify-content-center mb-3">
                                 <video width="60%" controls>
                                     <source src="/video4.mp4" type="video/mp4" />
                                     <track kind="captions">
                                 </video>
                             </div>
-                        </div>      
-                </div>  
+                        </div>
                 </div>
             </div>
+
             
 
 <div id="secao4" class="pt-5 pb-5">
